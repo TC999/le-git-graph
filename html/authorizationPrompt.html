@@ -2,16 +2,16 @@
   <div class="position-relative">
     <div class="col-9 mx-auto py-4">
       <h1 class="mt-9 h4" id="authorizationTitle">
-        Authorize Le Git Graph with GitHub to continue
+        在 GitHub 授权 Le Git Graph 以继续
       </h1>
       <p class="mb-3 authorizationReason" style="margin-bottom:10px;" id="authorizationDescription">
-        GitHub repo access is required to fetch the commits information.
+        获取提交信息需要 GitHub 仓库访问权限。
       </p>
       <input type="text" class="custom-pat-input form-control input-monospace input color-bg-subtle mb-4"
         data-autoselect="" value="" aria-label="" placeholder="Enter PAT" style="display:none; width: 100%;">
       <button class="btn btn-primary mb-9 authorizationButton authorizationButtonText" style="display: none;"
         id="authorizationStatusButton" value="Authorize with GitHub">
-        Authorize with GitHub
+        通过 GitHub 授权
       </button>
       <div data-view-component="true" class="BtnGroup py-4" id="authorizationButton">
         <button icon="" id="authorize-button"
@@ -19,12 +19,12 @@
           data-view-component="true"
           class="btn-sm btn btn-primary BtnGroup-item authorizeButton"
           aria-describedby="tooltip-5a8243e8-1420-49e5-93ea-f94b5a52d7a1">
-          Authorize with Le Git Graph
+          通过 Le Git Graph 授权
           <tool-tip id="tooltip-5a8243e8-1420-49e5-93ea-f94b5a52d7a1" for="authorize-button" popover="manual"
             data-direction="s" data-type="description" data-view-component="true"
             class="position-absolute sr-only authorize-button-text" role="tooltip"
-            style="--tool-tip-position-top: 194px; --tool-tip-position-left: 358.4453125px;">Authorize
-            the extension with your GitHub Account</tool-tip>
+            style="--tool-tip-position-top: 194px; --tool-tip-position-left: 358.4453125px;">
+            使用 GitHub 账户授权扩展</tool-tip>
         </button>
         <details group_item="true" id="my-forks-menu-518486100" data-view-component="true"
           class="details-reset details-overlay BtnGroup-parent d-inline-block position-relative">
@@ -53,7 +53,7 @@
                 <div class="SelectMenu-list">
 
                   <header class="SelectMenu-header">
-                    <h3 class="SelectMenu-title">Choose access level</h3>
+                    <h3 class="SelectMenu-title">选择访问等级</h3>
                     <button class="SelectMenu-closeButton" type="button" aria-label="Close menu"
                       data-toggle-for="my-forks-menu-518486100">
                       <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
@@ -71,7 +71,7 @@
                       data-ga-click="Give access to Private and Public Repositories"
                       role="menuitem" data-view-component="true"
                       class="SelectMenu-item btn rounded-0 border-bottom-0 text-normal f6 private-and-public-button">
-                      Private and public repositories
+                      私有和公共仓库
                     </button>
                   </footer>
                   <footer class="SelectMenu-footer p-0 position-sticky">
@@ -80,7 +80,7 @@
                       data-ga-click="Give access to Public Repositories only"
                       role="menuitem" data-view-component="true"
                       class="SelectMenu-item btn rounded-0 border-bottom-0 text-normal f6 public-only-button">
-                      Public repositories only
+                      仅公共仓库
                     </button>
                   </footer>
                   <footer class="SelectMenu-footer p-0 position-sticky">
@@ -89,7 +89,7 @@
                       data-ga-click="Give access using Custom Personal Access Token"
                       role="menuitem" data-view-component="true"
                       class="SelectMenu-item btn rounded-0 border-bottom-0 text-normal f6 custom-pat-button">
-                      Custom Personal Access Token
+                      自定义个人访问令牌
                     </button>
                   </footer>
 
@@ -103,9 +103,9 @@
       </div>
       <input type="hidden" id="authorizationType" value="privateAndPublic" class="authorizationType">
       <p class="mb-3 organisationAuthTip" style="margin-bottom:10px; color: gray" id="organisationAuthTip">
-        Repo owned by an organisation? Follow the steps <a
+        仓库由某个组织拥有？按照 <a
           href="https://github.com/NirmalScaria/le-git-graph/tree/main#setup-for-private-repos-owned-by-an-organization"
-          target="_blank">here</a> to authorize.
+          target="_blank">这里</a> 的步骤进行授权。
       </p>
     </div>
   </div>

@@ -6,25 +6,25 @@ async function changeAuthorizationStatus(status) {
     if (status == "WAITING") {
         authorizationDropdownButton.style.display = 'none';
         authorizationButton.style.display = 'inline-block';
-        authorizationTItle.innerHTML = "Waiting for authorization";
-        authorizationDescription.innerHTML = "Please complete the authorization process in the popup window.";
-        authorizationButton.innerHTML = 'Waiting...';
+        authorizationTItle.innerHTML = "等待授权";
+        authorizationDescription.innerHTML = "请在弹出窗口中完成授权。";
+        authorizationButton.innerHTML = '等待中...';
         authorizationButton.classList.remove('btn-primary');
         authorizationButton.removeEventListener("click", openAuthorization);
     }
     if (status == "SUCCESS") {
-        authorizationTItle.innerHTML = "Authorization successful";
-        authorizationDescription.innerHTML = "Reload this page to see the commits.";
-        authorizationButton.innerHTML = 'Reload Now';
+        authorizationTItle.innerHTML = "授权成功";
+        authorizationDescription.innerHTML = "重载查看提交。";
+        authorizationButton.innerHTML = '立即重载';
         authorizationButton.classList.add('btn-primary');
         authorizationButton.addEventListener("click", reloadThisPage);
     }
     if (status == "FAIL") {
         authorizationButton.style.display = 'none';
         authorizationDropdownButton.style.display = 'inline-block';
-        authorizationTItle.innerHTML = "Authorization failed";
-        authorizationDescription.innerHTML = "Please try again.";
-        authorizationButton.innerHTML = 'Try Again';
+        authorizationTItle.innerHTML = "授权失败";
+        authorizationDescription.innerHTML = "请重试。";
+        authorizationButton.innerHTML = '重试';
         authorizationButton.classList.add('btn-primary');
         authorizationButton.addEventListener("click", openAuthorization);
     }
@@ -99,23 +99,23 @@ async function addAuthorizationPrompt(reason) {
             authorizationTypeButton.value = "privateAndPublic";
             authorizationButton.disabled = false;
             authorizationButton.style.cursor = "pointer";
-            authorizationButton.value = "Authorize with Le Git Graph";
-            authorizationButton.innerHTML = "Authorize with Le Git Graph";
+            authorizationButton.value = "通过 Le Git Graph 授权";
+            authorizationButton.innerHTML = "通过 Le Git Graph 授权";
             customPATInput.style.display = "none";
         });
         publicOnlyButton.addEventListener("click", function (e) {
             authorizationTypeButton.value = "publicOnly";
             authorizationButton.disabled = false;
             authorizationButton.style.cursor = "pointer";
-            authorizationButton.value = "Authorize with Le Git Graph";
-            authorizationButton.innerHTML = "Authorize with Le Git Graph";
+            authorizationButton.value = "通过 Le Git Graph 授权";
+            authorizationButton.innerHTML = "通过 Le Git Graph 授权";
             customPATInput.style.display = "none";
         });
         customPATButton.addEventListener("click", function (e) {
             authorizationTypeButton.value = "customPAT";
             customPATInput.style.display = "block";
-            authorizationButton.value = "Set PAT";
-            authorizationButton.innerHTML = "Set PAT";
+            authorizationButton.value = "设置 PAT";
+            authorizationButton.innerHTML = "设置 PAT";
             if (customPATInput.value.length > 0) {
                 authorizationButton.disabled = false;
                 authorizationButton.style.cursor = "pointer";

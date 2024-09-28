@@ -1,66 +1,65 @@
-# Welcome to Le Git Graph contributing guide <!-- omit in toc -->
+# 欢迎来到 Le Git Graph 贡献指南 <!-- omit in toc -->
 
-Thank you for investing your time in contributing to our project! Any contribution you make will be reflected on Chrome Web Store and Firefox Addons Hub :sparkles:. 
+感谢你花时间为我们的项目做贡献！你所做的任何贡献都会在 Chrome 网上应用店和 Firefox 附加组件中心显示 :sparkles:。
 
-Read our [Code of Conduct](./CODE_OF_CONDUCT.md) to keep our community approachable and respectable.
+请阅读我们的 [行为准则](./CODE_OF_CONDUCT.md)，以保持我们的社区友好和尊重。
 
-In this guide you will get an overview of the contribution workflow from opening an issue, creating a PR, reviewing, and merging the PR.
+在本指南中，你将了解从开问题、创建 PR、审核到合并 PR 的贡献工作流程。
 
-## New contributor guide
+## 新贡献者指南
 
-To get an overview of the project, read the [README](README.md). Here are some resources to help you get started with extension development:
+要了解项目的概况，请阅读 [README](README.md)。以下是一些帮助你开始扩展开发的资源：
 
-- [Loading extension for development - Chrome](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked)
-- [Loading extension for development - Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing)
+- [为开发加载扩展 - Chrome](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked)
+- [为开发加载扩展 - Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing)
 - [Manifest V3](https://developer.chrome.com/docs/extensions/mv3/intro/)
 - [GitHub OAuth](https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps)
 - [GitHub GraphQL API](https://docs.github.com/en/graphql)
 
+## 开始
 
-## Getting started
+通过 Chrome 网上应用店或 Firefox 附加组件中心安装的扩展主要面向最终用户消费。开发时，扩展需要以不同的方式加载。首先，请按照以下步骤操作：
+1. 卸载或禁用已通过 Chrome 网上应用店或 Firefox 附加组件中心安装的 Le Git Graph。
+2. Fork 此仓库。
+3. 克隆已 Fork 的仓库。([如何操作？](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository))
+4. 从克隆的仓库加载扩展。对于 Chrome，请按照 [这些步骤](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked)，对于 Firefox，请按照 [这些步骤](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing)。
+5. 在源代码中进行更改，并在浏览器中刷新扩展以查看更改。
 
-Extension installed via Chrome Web Store or Firefox AddOns Hub are mostly meant for end user consumption. For development, the extension is to be loaded in a different way. To start with, go ahead with the following steps:
-1. Uninstall or disable Le Git Graph if already installed via Chrome Web Store or Firefox AddOns Hub.
-2. Fork this repository.
-3. Clone the forked repository. ([How?](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository))
-4. Load the extension from the cloned repository. Follow [these steps](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked) for Chrome and [these steps](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing) for Firefox.
-5. Make changes in the source code and refresh the extension inside the browser to see changes.
+### 问题
 
-### Issues
+#### 创建新问题
 
-#### Create a new issue
+如果你发现 Le Git Graph 存在问题，请 [搜索是否已经存在相关问题](https://docs.github.com/en/github/searching-for-information-on-github/searching-on-github/searching-issues-and-pull-requests#search-by-the-title-body-or-comments)。如果不存在相关问题，可以使用相关 [问题表单](https://github.com/NirmalScaria/le-git-graph/issues/new/choose) 打开一个新问题。
 
-If you spot a problem with Le Git Graph, [search if an issue already exists](https://docs.github.com/en/github/searching-for-information-on-github/searching-on-github/searching-issues-and-pull-requests#search-by-the-title-body-or-comments). If a related issue doesn't exist, you can open a new issue using a relevant [issue form](https://github.com/NirmalScaria/le-git-graph/issues/new/choose). 
+#### 解决问题
 
-#### Solve an issue
+浏览我们的 [现有问题](https://github.com/NirmalScaria/le-git-graph/issues)，找出你感兴趣的问题。你可以使用 `labels` 作为过滤器缩小搜索范围。一般来说，问题通常不会分配给任何人。如果你找到想要解决的问题，欢迎提交修复的 PR。
 
-Scan through our [existing issues](https://github.com/NirmalScaria/le-git-graph/issues) to find one that interests you. You can narrow down the search using `labels` as filters. As a general rule, issues are usually not assigned to anyone. If you find an issue to work on, you are welcome to open a PR with a fix.
+### 进行更改
 
-### Make Changes
+#### 开发者文档
 
-#### Developer documentation
+开发者文档提供了扩展当前工作的概念。强烈建议在积极进行源代码工作之前先简要浏览文档，以帮助你的工作更顺利。
 
-Developer documentation provides an idea on how the extension is working currently. It is strongly suggested to have a brief look at the documentation before proceeding to actively work on the source code as it will help your work be a lot smoother.
+#### 修复错误
 
-#### Bug fixes
+该项目目前不遵循单元测试（至少还没有）。请确保通过相关测试用例进行测试，以确保修复稳定。
 
-This project is not following unit tests (at least yet). Kindly make sure the fixes are stable by testing with relevant testcases depending on the change you worked on.
+### 提交更新
 
-### Commit your update
+当你对更改满意时，请提交更改。
 
-Commit the changes once you are happy with them.
+### 拉取请求
 
-### Pull Request
+完成更改后，提交并推送，然后创建拉取请求（PR）。
+- 如果你是在解决某个问题，请别忘了 [将 PR 链接到问题](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)。
+- 启用 [允许维护者编辑](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork) 的复选框，以便可以更新分支进行合并。
+一旦提交 PR，你的提案将会被审核，可能会有问题或需要额外信息的请求。
+- 你可能会被要求在 PR 合并之前进行更改，可以使用 [建议的更改](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/incorporating-feedback-in-your-pull-request) 或拉取请求评论进行修改。你可以通过 UI 直接应用建议的更改。你也可以在你的 Fork 中进行其他更改，然后提交到你的分支。
+- 如果遇到任何合并问题，请查看这个 [Git 教程](https://github.com/skills/resolve-merge-conflicts) 以帮助你解决合并冲突和其他问题。
 
-When you're finished with the changes, commit it, push it, and create a pull request, also known as a PR.
-- Don't forget to [link PR to issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) if you are solving one.
-- Enable the checkbox to [allow maintainer edits](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork) so the branch can be updated for a merge.
-Once you submit your PR, your proposal will be reviewed. There might be questions or requests for additional information.
-- You maybe asked for changes to be made before a PR can be merged, either using [suggested changes](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/incorporating-feedback-in-your-pull-request) or pull request comments. You can apply suggested changes directly through the UI. You can make any other changes in your fork, then commit them to your branch.
-- If you run into any merge issues, checkout this [git tutorial](https://github.com/skills/resolve-merge-conflicts) to help you resolve merge conflicts and other issues.
+### 你的 PR 已合并！
 
-### Your PR is merged!
+恭喜你 :tada::tada: 非常感谢你 :sparkles:。
 
-Congratulations :tada::tada: Big Thanks to you :sparkles:. 
-
-Once your PR is merged, your contributions will be publicly visible with the next version release. 
+一旦你的 PR 被合并，你的贡献将在下一个版本发布时公开可见。
